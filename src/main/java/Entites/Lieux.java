@@ -1,10 +1,16 @@
-package bdd;
+package Entites;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Lieux {
@@ -18,6 +24,16 @@ public class Lieux {
 	
 	@Column(name="REGION", length = 255, nullable = false)
 	String region;
+	
+	@ManyToOne
+	@JoinColumn(name="id_pays")
+	private Pays pays; 
+	
+	@OneToMany(mappedBy="lieux")
+	List<Personne> personne = new ArrayList<>();
+
+	public Lieux() {
+	}
 
 	public Lieux(String ville, String region) {
 		this.ville = ville;
