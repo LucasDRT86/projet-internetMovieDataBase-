@@ -52,10 +52,82 @@ public class Acteur extends Personne {
 	public Acteur() {
 	}
 
-
-
 	public Acteur(String ville, String region) {
 		super(ville, region);
 	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public double getTaille() {
+		return taille;
+	}
+
+
+
+	public void setTaille(double taille) {
+		this.taille = taille;
+	}
+
+
+
+	public String getUrl() {
+		return url;
+	}
+
+
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+
+
+	public Personne getPersonne() {
+		return personne;
+	}
+
+
+
+	public void setPersonne(Personne personne) {
+		this.personne = personne;
+	}
+
+
+
+	public List<Role> getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(List<Role> role) {
+		this.role = role;
+	}
+
+
+
+	public List<Film> getFilm() {
+		return film;
+	}
+
+
+
+	public void setFilm(List<Film> film) {
+		this.film = film;
+	}
+	
+	
 
 }
