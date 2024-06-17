@@ -43,25 +43,63 @@ public class Role {
 	public Role() {
 	}
 
-	public Role(String personnage) {
-		this.personnage = personnage;
-	}
-
+	/**
+	 * @return the id
+	 */
 	public int getId() {
 		return id;
 	}
 
+	/**
+	 * @param id the id to set
+	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return the personnage
+	 */
 	public String getPersonnage() {
 		return personnage;
 	}
 
+	/**
+	 * @param personnage the personnage to set
+	 */
 	public void setPersonnage(String personnage) {
 		this.personnage = personnage;
 	}
+
+	/**
+	 * @return the film
+	 */
+	public List<Film> getFilm() {
+		return film;
+	}
+
+	/**
+	 * @param film the film to set
+	 */
+	public void setFilm(List<Film> film) {
+		this.film = film;
+	}
+
+	/**
+	 * @return the acteur
+	 */
+	public List<Acteur> getActeur() {
+		return acteur;
+	}
+
+	/**
+	 * @param acteur the acteur to set
+	 */
+	public void setActeur(List<Acteur> acteur) {
+		this.acteur = acteur;
+	}
+
+
 	
 	
 }
